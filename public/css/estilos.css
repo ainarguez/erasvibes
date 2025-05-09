@@ -1,0 +1,84 @@
+html, body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0; 
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container-fluid {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    margin: 0;
+    padding: 0.5rem 1rem; 
+    border-bottom: 1px solid #eee;
+}
+
+.logo {
+    width: 230px;
+    height: 40px;
+}
+
+.navbar .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-amarillo {
+    background-color: #f3d709;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+.form-control {
+    border-radius: 20px;
+    padding-left: 2rem;
+}
+
+.rounded-circle {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.bg-white {
+    background-color: #fff;
+}
+
+.shadow {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+a.text-decoration-none:hover {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+.flecha {
+    margin-top: 10px;
+    font-size: 20px;
+    line-height: 1;
+    padding: 4px 12px;
+    border-radius: 30px;
+    background-color: #ffc107;
+    color: #000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    display: inline-block;
+    text-align: center;
+}
