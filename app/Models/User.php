@@ -84,6 +84,16 @@ class User extends Authenticatable
         })->where('status', 'accepted')->exists(); 
     }
 
+    public function friendRequestBetween(User $user)
+    {
+    return $this->receivedFriendRequests()
+                ->where('sender_id', $user->id)
+                ->orWhere(function($query) use ($user) {
+                    $query->where('receiver_id', $user->id)
+                          ->where('sender_id', $this->id);
+                })
+                ->first();
+    }
     public function friendsWithMessages()
     {
         $authId = $this->id; 
@@ -107,6 +117,11 @@ class User extends Authenticatable
 
         return $friends;
     }
+    public function receivedFriendRequests()
+    {
+        return $this->hasMany(\App\Models\FriendRequest::class, 'receiver_id');
+    }
+
 
     public function sentMessages()
     {

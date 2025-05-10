@@ -4,6 +4,19 @@
 
 @include('partials.navbar')
 
+@if(session('success'))
+    <div class="position-fixed top-50 start-50 translate-middle alert alert-warning text-center shadow rounded p-4"  style="z-index: 9999; min-width: 300px;">
+        {{ session('success') }}
+    </div>
+
+<script>
+    setTimeout(() => {
+        document.querySelector('.alert').remove();
+    }, 3000); 
+</script>
+@endif
+
+
 <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
 
     <!-- Contenido central -->
@@ -35,6 +48,18 @@
                 <a href="{{ route('profile.edit') }}" class="btn btn-warning mt-3">Editar perfil</a>
             @endif
         @endauth
+        @auth
+        @if(auth()->user()->isFriendWith($user))
+            <form action="{{ route('friends.reject', $user->friendRequestBetween(auth()->user())) }}" method="POST" class="mt-3">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="btn btn-danger" onclick="return confirm('¿Estás seguro de eliminar a este amigo?')">
+                    Eliminar amigo
+                </button>
+            </form>
+        @endif
+    @endauth
+
     </div>
 </div>
 @endsection

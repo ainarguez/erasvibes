@@ -6,7 +6,7 @@ use App\Http\Controllers\FriendController;
 use App\Http\Controllers\InboxController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\UserController;
-use App\Http\Middleware\IsAdmin; // ✅ Añade esta línea
+use App\Http\Middleware\IsAdmin; 
 
 // Página de inicio y búsqueda
 Route::get('/', [ProfileController::class, 'index'])->name('home');

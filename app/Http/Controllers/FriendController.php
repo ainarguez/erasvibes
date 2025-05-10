@@ -76,14 +76,33 @@ class FriendController extends Controller
         $request->update(['status' => 'accepted']);
         return back()->with('message', '¡Amigo añadido!');
     }
+    public function friendRequestBetween(User $user)
+    {
+        return $this->receivedFriendRequests()
+            ->where('sender_id', $user->id)
+            ->orWhere(function($query) use ($user) {
+                $query->where('receiver_id', $user->id)
+                    ->where('sender_id', $this->id);
+            })
+            ->first();
+    }
+
 
     public function reject(FriendRequest $request)
     {
-        if ($request->receiver_id !== auth()->id()) {
+        $userId = auth()->id();
+
+        if ($request->receiver_id !== $userId && $request->sender_id !== $userId) {
             abort(403, 'No autorizado');
         }
 
-        $request->delete(); // elimina la solicitud
+        if ($request->status === 'accepted') {
+            $request->delete(); // Elimina amistad existente
+            return redirect()->back()->with('success', 'Amigo eliminado.');
+        }
+
+        $request->delete(); // Elimina solicitud pendiente
         return back()->with('message', 'Solicitud rechazada.');
     }
+
 }
