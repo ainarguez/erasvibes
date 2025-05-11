@@ -146,4 +146,4 @@ erasvibes-production.up.railway.app
 
 **Ainara Rodriguez Cuadrado**  
 📧 [ainara.ro.cu@gmail.com](mailto:ainara.ro.cu@@gmail.com)  
-🌐 [www.erasvibes.com](https://erasvibes-production.up.railway.app/) *(en construcción)*
+🌐 [www.erasvibes.com](https://erasvibes-production.up.railway.app/)
