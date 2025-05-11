@@ -136,3 +136,14 @@ php artisan serve
 ```
 
 Acceder a http://localhost:8000
+
+erasvibes-production.up.railway.app
+
+
+---
+
+## ✉️ Contacto
+
+**Ainara Rodriguez Cuadrado**  
+📧 [ainara.ro.cu@gmail.com](mailto:ainara.ro.cu@@gmail.com)  
+🌐 [www.erasvibes.com](https://erasvibes-production.up.railway.app/) *(en construcción)*
