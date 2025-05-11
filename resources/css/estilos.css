@@ -27,8 +27,8 @@ body {
 }
 
 .logo {
-    width: 230px;
     height: 40px;
+    width: auto;
 }
 
 .navbar .navbar-brand {
