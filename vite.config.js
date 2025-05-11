@@ -7,20 +7,14 @@ export default defineConfig({
             input: [
                 'resources/css/app.css',
                 'resources/js/app.js',
-                'resources/css/estilos.css',
+                'resources/css/estilos.css'
             ],
             refresh: true,
         }),
     ],
     build: {
-        outDir: 'public/build',
         manifest: true,
-        rollupOptions: {
-            input: [
-                'resources/css/app.css',
-                'resources/js/app.js',
-                'resources/css/estilos.css',
-            ],
-        },
+        outDir: 'public/build', 
+        emptyOutDir: true,
     },
 });
