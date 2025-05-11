@@ -1,18 +1,19 @@
 @extends('layouts.app')
 
-@section('content')
-
+@push('styles')
 <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
+@endpush
 
+@section('content')
 <div class="container-fluid">
-    
+
     @include('partials.navbar')
 
     <div class="d-flex justify-content-center align-items-center" style="min-height: calc(100vh - 80px);">
-    <div class="text-center">
+        <div class="text-center">
             <h2 class="mb-4">¿A dónde te llevará el Erasmus?</h2>
-                <form action="{{ route('map') }}" method="GET" class="d-flex gap-3">
-            <!-- Campo de búsqueda -->
+            <form action="{{ route('map') }}" method="GET" class="d-flex gap-3">
+                <!-- Campo de búsqueda -->
                 <div class="input-group">
                     <span class="input-group-text"><i class="bi bi-search"></i></span>
                     <input type="text" class="form-control" name="place" placeholder="Lugar..." value="{{ request('place') }}">
@@ -30,5 +31,4 @@
         </div>
     </div>
 </div>
-
 @endsection
