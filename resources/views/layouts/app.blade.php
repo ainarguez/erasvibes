@@ -6,7 +6,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>{{ config('app.name', 'Laravel') }}</title>
-        <link rel="icon" href="{{ asset('img/logo.png') }}" type="image/png">
+        <link rel="icon" href="{{ asset(path: 'img/logo.png') }}" type="image/png">
 
 
         <!-- Fonts -->
@@ -16,7 +16,9 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
         <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/css/estilos.css', 'resources/js/app.js'])
+        <link rel="stylesheet" href="{{ asset('build/assets/app.css') }}">
+        <link rel="stylesheet" href="{{ asset('build/assets/estilos.css') }}">
+        <script src="{{ asset('build/assets/app.js') }}" defer></script>
 
 
     </head>
