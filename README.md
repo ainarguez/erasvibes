@@ -47,27 +47,34 @@
 
 ## 🧰 Tecnologías Usadas
 
-| Herramienta        | Propósito                        | Versión  |
-|--------------------|----------------------------------|----------|
-| Laravel            | Framework backend PHP            | 11.x     |
-| PHP                | Lenguaje del servidor            | 8.3      |
-| MySQL              | Base de datos relacional         | 8.0+     |
-| Bootstrap          | Framework de diseño CSS          | 5.x      |
-| Composer           | Gestión de dependencias PHP      | 2.x      |
-| Node.js & npm      | Compilación de assets frontend   | 18.x     |
-| Git & GitHub       | Control de versiones             | -        |
+| Herramienta        | Propósito                        |
+|--------------------|----------------------------------|
+| Laravel            | Framework backend PHP            |
+| PHP                | Lenguaje del servidor            |
+| MySQL              | Base de datos relacional         |
+| Bootstrap          | Framework de diseño CSS          |
+| Composer           | Gestión de dependencias PHP      |
+| Node.js & npm      | Compilación de assets frontend   |
+| Git & GitHub       | Control de versiones             |
 
+---
 
+## 📚 Documentación
+
+<div align="center">
+  <a href="https://drive.google.com/drive/folders/1W2UPfxio47uYZSii2hmRdvBXqXjt85Jp?usp=sharing " target="_blank">
+    <p>📚 Ver la documentación</p>
+  </a>
+</div>
 ---
 
 ## 📹 Video
 
 <div align="center">
   <a href="https://youtu.be/0wy_rNi8s8Q " target="_blank">
-    <p>🎥 Ver demostración en YouTube</p>
+    <p>🎥 Ver el video en YouTube</p>
   </a>
 </div>
-
 
 ---
 
@@ -87,5 +94,47 @@
 1. Clonar el repositorio:
 
 ```bash
-git clone https://github.com/ainarguez/erasvibes.git
+git clone https://github.com/tuusuario/erasvibes.git
 cd erasvibes
+```
+
+2. Instalar dependencias:
+
+```bash
+composer install
+npm install && npm run build
+```
+
+3. Configurar entorno:
+
+```bash
+cp .env.example .env
+php artisan key:generate
+php artisan storage:link
+```
+
+4. Configurar la base de datos:
+``` bash 
+APP_URL=http://localhost/erasvibes/public
+DB_DATABASE=erasvibes
+DB_USERNAME=root
+DB_PASSWORD=
+
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USERNAME=tu-email@gmail.com
+MAIL_PASSWORD=tu-contraseña-de-aplicación
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS=tu-email@gmail.com
+MAIL_FROM_NAME="Soporte Erasvibes"
+MAIL_SUPPORT_ADDRESS=tu-email@gmail.com
+```
+
+5. Ejecutar migraciones:
+```bash
+php artisan migrate
+php artisan serve
+```
+
+Acceder a http://localhost:8000
