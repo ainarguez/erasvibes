@@ -6,15 +6,22 @@ export default defineConfig({
         laravel({
             input: [
                 'resources/css/app.css',
+                'resources/css/estilos.css',
                 'resources/js/app.js',
-                'resources/css/estilos.css'
             ],
             refresh: true,
         }),
     ],
     build: {
         manifest: true,
-        outDir: 'public/build', 
+        outDir: 'public/build',
         emptyOutDir: true,
+        rollupOptions: {
+            output: {
+                entryFileNames: 'assets/[name]-[hash].js',
+                chunkFileNames: 'assets/[name]-[hash].js',
+                assetFileNames: 'assets/[name]-[hash][extname]',
+            }
+        }
     },
 });

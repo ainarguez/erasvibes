@@ -13,19 +13,19 @@
     "isEntry": true
   },
   "resources/css/estilos.css": {
-    "file": "assets/estilos-tn0RQdqM.css",
+    "file": "assets/estilos-BluUIdmV.css",
     "src": "resources/css/estilos.css",
     "isEntry": true
   },
   "resources/js/app.js": {
-    "file": "assets/app-ChfMvrKv.js",
+    "file": "assets/app-CYT56rf2.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "css": [
       "assets/app-Bp1WFWQk.css",
       "assets/app-CU3mXoEG.css",
-      "assets/estilos-tn0RQdqM.css"
+      "assets/estilos-BluUIdmV.css"
     ],
     "assets": [
       "assets/bootstrap-icons-BtvjY1KL.woff2",
