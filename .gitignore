@@ -1,6 +1,7 @@
-/.phpunit.cache
+/phpunit.cache
 /node_modules
-/public/build
+# Ignoramos otras carpetas comunes, pero permitimos el build de Vite
+#/public/build
 /public/hot
 /public/storage
 /storage/*.key
@@ -21,3 +22,8 @@ yarn-error.log
 /.nova
 /.vscode
 /.zed
+
+#Forzamos incluir el build de Vite en el repo
+!public/build/
+!public/build/manifest.json
+!public/build/assets/

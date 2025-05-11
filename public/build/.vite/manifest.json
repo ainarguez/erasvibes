@@ -1,0 +1,35 @@
+{
+  "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff": {
+    "file": "assets/bootstrap-icons-BOrJxbIo.woff",
+    "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff"
+  },
+  "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2": {
+    "file": "assets/bootstrap-icons-BtvjY1KL.woff2",
+    "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-CU3mXoEG.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/css/estilos.css": {
+    "file": "assets/estilos-tn0RQdqM.css",
+    "src": "resources/css/estilos.css",
+    "isEntry": true
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-ChfMvrKv.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "css": [
+      "assets/app-Bp1WFWQk.css",
+      "assets/app-CU3mXoEG.css",
+      "assets/estilos-tn0RQdqM.css"
+    ],
+    "assets": [
+      "assets/bootstrap-icons-BtvjY1KL.woff2",
+      "assets/bootstrap-icons-BOrJxbIo.woff"
+    ]
+  }
+}
