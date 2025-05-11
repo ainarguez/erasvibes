@@ -1,34 +1,47 @@
-# 🌍 Erasvibes
+<div align="center">
+  <h1>Erasvibes</h1>
+</div>
 
-Conecta con otros estudiantes Erasmus en tu misma ciudad, fechas y destino.
-
-![Logo](public/img/logo.png)
+<div align="center">
+  <img src="public/img/logo.png" alt="Erasvibes Logo" width="300" />
+  <h2>🌍 Conectando estudiantes Erasmus en tu ciudad y fechas de destino</h2>
+  
+  <div>
+    <img src="https://img.shields.io/badge/PHP-8.3-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP" />
+    <img src="https://img.shields.io/badge/Laravel-11.x-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel" />
+    <img src="https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
+    <img src="https://img.shields.io/badge/Bootstrap-5-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" />
+    <img src="https://img.shields.io/badge/Node.js-18.x-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js" />
+    <img src="https://img.shields.io/badge/Composer-2.x-885630?style=for-the-badge&logo=composer&logoColor=white" alt="Composer" />
+    <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
+  </div>
+</div>
 
 ---
 
 ## ❓ ¿Qué es Erasvibes?
 
-**Erasvibes** es una plataforma web desarrollada con Laravel que permite a estudiantes del programa Erasmus encontrarse, comunicarse y crear comunidad en su ciudad de destino. Los usuarios pueden filtrar personas por fechas y lugares, añadir amigos y chatear en privado.
+**Erasvibes** es una plataforma web diseñada para conectar estudiantes Erasmus que se encuentran en el mismo destino y periodo. Permite a los usuarios filtrar por fechas y ubicación, agregar amigos y comunicarse mediante un chat privado, promoviendo la integración social de los estudiantes.
 
 ---
 
 ## 🎯 Objetivos del Proyecto
 
-- Conectar a estudiantes Erasmus en base a fechas y lugares comunes.
-- Fomentar la integración social y el acompañamiento en una nueva ciudad.
-- Facilitar la búsqueda de alojamiento, universidades o eventos comunes.
-- Ofrecer una plataforma segura, moderna y amigable.
+- Facilitar la conexión de estudiantes Erasmus en la misma ciudad y fechas.
+- Fomentar la integración social y el acompañamiento en un nuevo entorno.
+- Ayudar en la búsqueda de alojamiento, universidades y eventos comunes.
+- Crear una plataforma segura, intuitiva y amigable.
 
 ---
 
 ## 🔍 Funcionalidades Principales
 
-- Registro y autenticación de usuarios
-- Filtro por fechas y lugar de destino
-- Sistema de solicitudes y lista de amigos
-- Chat privado entre usuarios conectados
-- Vista del perfil propio y de otros estudiantes
-- Panel de administrador para gestionar usuarios
+- **Registro y autenticación de usuarios**: Los usuarios se registran y autentican en la plataforma para acceder a las funcionalidades.
+- **Filtrado por fechas y destino**: Permite a los estudiantes buscar otros usuarios según su ciudad y periodo Erasmus.
+- **Sistema de amigos**: Los usuarios pueden enviarse solicitudes de amistad y aceptar o rechazar solicitudes.
+- **Chat privado**: Los usuarios pueden chatear de manera privada con los amigos que han agregado.
+- **Vista de perfil**: Los usuarios pueden ver su propio perfil y el de otros.
+- **Panel de administrador**: Acceso exclusivo para administradores que gestionan los usuarios.
 
 ---
 
@@ -44,7 +57,17 @@ Conecta con otros estudiantes Erasmus en tu misma ciudad, fechas y destino.
 | Node.js & npm      | Compilación de assets frontend   | 18.x     |
 | Git & GitHub       | Control de versiones             | -        |
 
-Compatible con Linux, macOS y Windows.
+
+---
+
+## 📹 Video
+
+<div align="center">
+  <a href="https://youtu.be/0wy_rNi8s8Q " target="_blank">
+    <p>🎥 Ver demostración en YouTube</p>
+  </a>
+</div>
+
 
 ---
 
@@ -59,14 +82,10 @@ Compatible con Linux, macOS y Windows.
 - Apache / Nginx
 - Laravel CLI (`composer global require laravel/installer`)
 
-### Pasos
+### Pasos de Instalación
+
+1. Clonar el repositorio:
 
 ```bash
 git clone https://github.com/ainarguez/erasvibes.git
 cd erasvibes
-composer install
-npm install && npm run build
-cp .env.example .env
-php artisan key:generate
-php artisan migrate
-php artisan storage:link
