@@ -76,8 +76,6 @@
   </a>
 </div>
 
----
-
 ## ⚙️ Instalación del Proyecto
 
 ### Requisitos previos
