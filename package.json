@@ -1,19 +1,25 @@
 {
     "private": true,
+    "type": "module",
     "scripts": {
-        "build:css": "npx tailwindcss -i ./resources/css/app.css -o ./public/css/app.css --minify"
+        "build": "vite build",
+        "dev": "vite"
     },
     "devDependencies": {
         "@tailwindcss/forms": "^0.5.2",
+        "alpinejs": "^3.4.2",
         "autoprefixer": "^10.4.2",
+        "axios": "^1.7.4",
+        "concurrently": "^9.0.1",
+        "laravel-vite-plugin": "^1.2.0",
         "postcss": "^8.4.31",
-        "tailwindcss": "^3.4.17"
+        "tailwindcss": "^3.4.17",
+        "vite-plugin-laravel": "^0.3.1"
     },
     "dependencies": {
-        "alpinejs": "^3.4.2",
-        "axios": "^1.7.4",
         "admin-lte": "^4.0.0-beta3",
         "bootstrap": "^5.3.3",
-        "bootstrap-icons": "^1.11.3"
+        "bootstrap-icons": "^1.11.3",
+        "vite": "^5.4.18"
     }
 }

@@ -3,9 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\URL;
-use Illuminate\Support\Facades\Vite;
-use Spatie\Permission\Middleware\RoleMiddleware;
+use Illuminate\Routing\Router;
+
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -14,19 +13,17 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->app->bind('role', function ($app) {
-            return new RoleMiddleware();
-        });
+        //
     }
 
     /**
      * Bootstrap any application services.
      */
-    public function boot(): void
-    {
-        if (env('APP_ENV') === 'production') {
-            URL::forceScheme('https');
-            Vite::useBuildDirectory('build');
-        }
-    }
+    public function boot(Router $router) 
+    { 
+
+        $router->aliasMiddleware('role', \Spatie\Permission\Middleware\RoleMiddleware::class); 
+
+    } 
+
 }

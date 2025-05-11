@@ -3,9 +3,7 @@
 @section('content')
 
 <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
-<link rel="stylesheet" href="{{ asset('build/assets/app.css') }}">
-<link rel="stylesheet" href="{{ asset('build/assets/estilos.css') }}">
-<script src="{{ asset('build/assets/app.js') }}" defer></script>
+@vite(['resources/css/app.css', 'resources/js/app.js', 'resources/css/estilos.css'])
 
 <div class="container-fluid">
     <div class="row">
